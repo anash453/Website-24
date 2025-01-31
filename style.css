@@ -1,0 +1,229 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: #eeeeee;
+    font-size: 14px;
+    line-height: 24px;
+    color: #666;
+}
+.header-wrapper {
+    margin-bottom: 100px;
+}
+.header-wrapper .header-image {
+    min-height: 450px;
+    background: url(images/img-header.png) no-repeat top center;
+    display: block;
+}
+a {
+    color: #428bca;
+    text-decoration: none;
+}
+.header-wrapper .title-theme {
+    background-color: #ea3a3c;
+    color: #fff;
+    font-family: "Roboto Bold";
+    font-size: 30px;
+    padding: 30px 0;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 40px;
+}
+.container {
+    width: 100%;
+    max-width: 1170px; /* Adjust based on the screen width media queries */
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Better than negative margins for spacing */
+}
+
+.layout-wrapper .item {
+    margin-bottom: 60px;
+}
+
+.layout-theme-wrapper .image-item {
+    top: 0px;
+}
+
+.image-item {
+    text-align: center;
+    position: relative;
+}
+.image-item:hover {
+    transform: translateY(-10px);
+}
+.item-info {
+    text-align: center;
+}
+
+.item-info .name-item {
+    margin-bottom: 5px;
+}
+
+.item-info h2 a {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #444;
+    line-height: 38px;
+    border: 1px solid #aaa;
+    border-radius: 20px;
+    font-family: 'Roboto Bold';
+    display: inline-block;
+    padding: 0 20px;
+    transition: all 0.3s ease 0s;
+}
+.item-info h2 a:hover {
+    background-color: #EA3A3C;
+    color: #fff;
+    border-color: #ea3a3c;
+}
+
+.row3 {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 20px;
+}
+/* write a media quary */
+@media screen and (max-width: 992px) {
+    .row3 {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media screen and (max-width: 768px) {
+    .row3 {
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.theme-color {
+    padding-bottom: 10px;
+    text-align: center;
+}
+.theme-color .description {
+    margin-bottom: 30px;
+}
+.description > span {
+    display: inline-block;
+    padding: 0 10px;
+    background-color: #eeeeee;
+}
+.description {
+    font-size: 24px;
+    background: url(images/bg_title.png) repeat-x center left;
+    font-family: "Roboto Bold";
+    color: #444;
+}
+.image-item {
+    position: relative;
+    display: inline-block;
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  .image-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  .image-item:hover {
+    box-shadow: 10px 10px  rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  .image-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #EEEEEE;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+  }
+  
+  .image-item:hover ~ .image-item::after {
+    opacity: 1;
+  }
+  .footer-wrapper {
+    padding-top: 70px;
+}
+.footer-wrapper .footer-button {
+    background-color: #444444;
+    padding: 41px 0 28px;
+    text-align: center;
+}
+.footer-wrapper .footer-button span {
+    font-size: 30px;
+    text-transform: uppercase;
+    font-family: 'Roboto Bold';
+    color: #fff;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 15px;
+}
+.footer-wrapper .footer-button .btn-buy {
+    display: inline-block;
+    line-height: 32px;
+    border: 2px solid #fff;
+    padding: 0 20px;
+    border-radius: 20px;
+    font-family: 'Roboto Bold';
+    font-size: 16px;
+    color: #fff;
+    vertical-align: top;
+    top: -6px;
+    position: relative;
+    text-decoration: none;
+    transition: all 0.3s ease 0s;
+}
+.footer-wrapper .footer-button .btn-buy:hover {
+    background-color: #EA3A3C;
+    color: #fff;
+    border-color: #ea3a3c;
+}
+.bottom-footer {
+    min-height: 134px;
+    background-color: #333333;
+}
+#myBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: #4884FF;
+    cursor: pointer;
+    font-size: 20px;
+    color: #fff;
+    border-radius: 50%;
+    border: 0;
+    outline: unset;
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+  }
+  #myBtn i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  #myBtn.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  
